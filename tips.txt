@@ -1,0 +1,8 @@
+# Just a reminder of concatenation
+
+phrase = "Hello"
+user_name = input("Enter your name: ")
+user_last_name = input("Enter your lastname: ")
+
+print("%s %s" % (phrase, user_name))
+print("Hello {} {}".format(user_name, user_last_name))
