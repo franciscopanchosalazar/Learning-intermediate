@@ -1,3 +1,5 @@
+# This code allows me to check if the sum of two elements of a list is equal to a target number
+# and in which position those two numbers are located
 class Solutions:
 
     def __init__(self, nums_list, target_number):
@@ -8,7 +10,7 @@ class Solutions:
         self.target_comparator = 0
 
     def for_sol(self):
-        for i in self.nums_list:
+        for i in self.nums_list:  # 2
             # self.evaluation_number = self.nums_list[self.index_counter]
             for a in self.nums_list:
                 self.target_comparator = i + a
