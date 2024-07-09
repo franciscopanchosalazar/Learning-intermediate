@@ -12,7 +12,7 @@ def capital_indexes(user_string: str):
     return capital
 
 
-print(capital_indexes('HellO WorlD')) # output [0, 4, 6, 10]
+print(capital_indexes('HellO WorlD'))  # output [0, 4, 6, 10]
 
 
 # Solution two:
@@ -39,12 +39,12 @@ def middle_letter(user_word=''):
     if word_length % 2 == 0:
         print('" "')
     else:
-        middle_index = int((word_length/2) - 0.5)
+        middle_index = int((word_length / 2) - 0.5)
         print(f'"{user_word[middle_index]}"')
 
 
-middle_letter('abc')    # output " "
-middle_letter("aaaa")   # output b
+middle_letter('abc')  # output " "
+middle_letter("aaaa")  # output b
 
 
 # Online status
@@ -54,9 +54,9 @@ middle_letter("aaaa")   # output b
 # For example, consider the following dictionary:
 
 # statuses = {
-    # "Alice": "online",
-    # "Bob": "offline",
-    # "Eve": "online",
+# "Alice": "online",
+# "Bob": "offline",
+# "Eve": "online",
 # }
 
 # In this case, the number of people online is 2.
@@ -128,6 +128,7 @@ def double_letters(user_string: str):
 
 
 double_letters('pan')
+
 
 # Adding and removing dots
 # Write a function named add_dots that takes a string and adds "." in between each letter.
@@ -274,8 +275,8 @@ def flatten_three(*args):
 
 
 flatten([9, 6, 9, 1], [1, 4, 7, 9])
-flatten_two([8, 1, 5, 9], [6, 8, 1, 5])     # Add as many lists as you want
-flatten_three([8, 4, 1, 3], [0, 2, 5, 5])   # Add as many lists as you want
+flatten_two([8, 1, 5, 9], [6, 8, 1, 5])  # Add as many lists as you want
+flatten_three([8, 4, 1, 3], [0, 2, 5, 5])  # Add as many lists as you want
 
 
 # Min-maxing
@@ -308,8 +309,9 @@ def div_3(num):
     return True if num % 3 == 0 else False
 
 
-print(div_3(5))     # Return False
-print(div_3(15))    # Return True
+print(div_3(5))  # Return False
+print(div_3(15))  # Return True
+
 
 # Up and down
 # Define a function named up_down that takes a single number as its parameter.
@@ -348,3 +350,56 @@ b_num = "00100000000100000100001"
 print(consecutive_zeros(b_num))
 print(consecutive_zeros("1001101000110"))
 
+
+# All equal
+# Define a function named all_equal that takes a list and checks
+# whether all elements in the list are the same.
+
+def all_equals(user_list: list):
+    nums = 0
+    for i in user_list:
+        nums += i
+
+    if nums / len(user_list) == user_list[0]:
+        print(f"All the elements are equal: {user_list}")
+        return True
+
+    else:
+        print(f"Not all the elements are equal: {user_list}")
+        return False
+
+
+print(all_equals([5, 2, 5, 3]))
+print(all_equals([5, 5, 5, 5]))
+
+
+# Boolean and
+# Define a function named triple_and that takes three parameters
+# and returns True only if they are all True and False otherwise.
+
+def triple_and(*args: bool):
+    keep = True
+    for i in args:
+        if i:
+            continue
+        else:
+            keep = False
+
+    return keep
+
+
+print(triple_and(True, False, True))
+print(triple_and(True, True, True, True))
+
+
+# Writing short code
+# Define a function named convert that takes a list of numbers as its only
+# parameter and returns a list of each number converted to a string.
+
+def convert(my_values):
+    return str(my_values)
+
+
+my_list = [5, 2, 5, 3]
+a = map(convert, my_list)
+print(list(a))

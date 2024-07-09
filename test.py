@@ -68,3 +68,5 @@ class Info:
 
 u_1 = Info(name, middle_name, surname, second_surname)
 """
+a = [6, 8, 1, 5]
+print(a[2])
