@@ -1,3 +1,4 @@
+
 """
 # String slicing
 phrase = 'panchohernansalazarbravo'
@@ -68,5 +69,44 @@ class Info:
 
 u_1 = Info(name, middle_name, surname, second_surname)
 """
-a = [6, 8, 1, 5]
-print(a[2])
+"""
+lst = [2, 5, 8, 10, 12, 7, 13, 15]
+count_within_range = sum(5 <= x <= 12 for x in lst)
+print(count_within_range)
+
+lst_2 = [3, 4, 5, 6, 11, 12]
+counting_all = sum(lst_2)
+over_10 = sum(x > 10 for x in lst_2)
+
+print(counting_all)
+print(over_10)
+
+"""
+
+"""
+# Cool way to create a list:
+a = [random.randint(1, 10) for i in range(3)]   # -----> output [x, x, x] where x are random values from 1 to 10
+print(a)
+
+# 2D List:
+d2 = [[2 for x in range(3)] for z in range(2)]  # -----> output [[2, 2, 2], [2, 2, 2]]
+print(d2)
+
+d22 = [["x" for _ in range(4)] for _ in range(3)]
+print(d22)  # -----> output [['x', 'x', 'x', 'x'], ['x', 'x', 'x', 'x'], ['x', 'x', 'x', 'x']]
+
+# Iterating in the d2 list, in one line and as usual
+# Short version
+a = [sum(lst) for lst in d2]
+print(a)
+
+# Long version
+y = []
+for i in d2:
+    y.append(sum(i))
+
+print(y)
+"""
+
+
+
